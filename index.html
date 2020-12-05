@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>My Tip Calculator</title>
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="icon" href="images/tip.png" type="image/x-icon"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+ <div id="main">
+   <h1>Handy Dandy Tipper</h1>
+   <div id="calulator">
+     <form id="form">
+       <p>Cost Of Meal:
+         <p>$ <input id="billTotal" type="text" placeholder="Your Meal Amount">
+           <p>How Much To Tip:
+             <select id="tipPercentage" onchange="java_script_:show(this.options[this.selectedIndex].value)">
+               <option disabled selected value="0">-- Your Service Was --</option>
+               <option value="0.3"> Best Service Ever! 30; </option>
+               <option value="0.2"> Service Was Great! 20; </option>
+               <option value="0.15"> Very Good Service! 15; </option>
+               <option value="0.1"> Mehhhh… 10; </option>
+               <option value="0.05"> Won’t Be Back! 5; </option>
+               <option value="other">Other </option>
+             </select>
+             <input id="tipNum" type="text" placeholder="Tip Value (%)"><span id="percentage"></span>
+     </form>
+     <p># of people:</p>
+     <input id="numPeople" type="text" placeholder="# of People"> people
+     <button type="button" id="calculate">Push For Tip!</button>
+     <button type="button" id="clear">Clear</button>
+   </div>
+   <div id="totalTip">
+     $<span id="tip">0.00</span>
+     <small id="each">each</small>
+   </div>
+ </div>
+ <script type="text/javascript" src="tipcalculator.js"></script>
+
+
+ <script src="js/index.js"></script>
+</body>
+<footer>
+</footer>
+</html>
+
+
